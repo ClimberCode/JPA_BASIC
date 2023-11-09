@@ -39,7 +39,6 @@ public class Team {
         this.members = members;
     }
 
-    @OneToMany
-    @JoinColumn(name = "team", referencedColumnName = "id")
+    @OneToMany(mappedBy = "team")
     private List<Member> members;
 }
