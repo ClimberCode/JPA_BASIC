@@ -14,6 +14,17 @@ public class Member {
     @Column(name="name")
     private String username;
 
+    @ManyToOne
+    private Team team;
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
+    }
+
     public Long getId() {
         return id;
     }

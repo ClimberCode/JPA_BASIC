@@ -14,11 +14,21 @@ public class JpaMain {
         tx.begin();
 
         try {
+            Team team1 = new Team();
+            team1.setName("team1");
+
+            Team team2 = new Team();
+            team2.setName("team2");
+            em.persist(team1);
+            em.persist(team2);
+
             Member member1 = new Member();
             member1.setUsername("AA");
+            member1.setTeam(team1);
 
             Member member2 = new Member();
             member2.setUsername("BB");
+            member2.setTeam(team2);
 
             Member member3 = new Member();
             member3.setUsername("CC");
